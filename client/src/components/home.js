@@ -6,7 +6,7 @@ function homepage(props) {
 
   return (
 
-
+// updated and cleaned code!
     <div className="tabs is-centered">
       
       {/* <!-- Latest compiled and minified CSS --> */}
