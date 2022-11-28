@@ -1,11 +1,11 @@
 import React from "react";
-// import logo from "./IMG/Tender Logo WIP";
+import logo from "../IMG/Tender Logo WIP.png"
 
 function homepage(props) {
   const tabs = ["Home", "About", "Login", "Sign Up","Help"];
   return (
     <div className="tabs is-centered">
-         {/* <img className="TenderLogo" src={logo} alt="logo" /> */}
+         <img className="TenderLogo" src={logo} alt="logo" />
       <ul className="nav nav-tabs">
         {tabs.map((tab, i) => (
           <li
