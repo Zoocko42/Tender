@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 
 // state is being used to render the new pages when clicked!
+// test pull req to git hub
 function App() {
 // the 0 in the useState function is representing the current page the app is rendering, can use a string
 // intial page is named current page, can change page using setcurrentpage
