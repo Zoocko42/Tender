@@ -1,0 +1,92 @@
+[
+ {
+    "username": "lillyJ",
+    "password": "lillypad40",
+    "firstName": "Lanisa",
+    "lastName": "Jacobs",
+    "email": "lilly@gmail.com",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "dependents": [ {"type": "child", "name": "davie", "age": 6}]
+ },
+  {
+    "username": "monalisa50",
+    "password": "monalona789",
+    "firstName": "Malia",
+    "lastName": "Perry",
+    "email": "monperr56@gmail.com",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "dependents": [ {"type": "child", "name": "Jillian", "age": 10}]
+  },
+  {
+    "username": "eddiepop89",
+    "password": "mjisit95",
+    "firstName": "Edward",
+    "lastName": "Macklie",
+    "email": "edmw76@yahoo.com",
+    "city": "Alpharetta",
+    "state": "Georgia",
+    "dependents": [ {"type": "child", "name": "Ebony", "age": 2}]
+  },
+{
+  "username": "camiey4568",
+  "password": "7854snackscakes",
+  "firstName": "Cameron",
+  "lastName": "Washington",
+  "email": "cammie65@yahoo.com",
+  "city": "Duluth",
+  "state": "Georgia",
+  "dependents": [ {"type": "child", "name": "Danni", "age": 4}]
+},
+{
+    "username": "karenapple",
+    "password": "dogsarelife",
+    "firstName": "Karen",
+    "lastName": "Daniels",
+    "email": "kd19845@yahoo.com",
+    "city": "johns Creek",
+    "state": "Georgia",
+    "dependents": [ {"type": "pet", "name": "Neutron", "age": 4}]
+  },
+  {
+    "username": "milano4044",
+    "password": "parisitaly347",
+    "firstName": "Milan",
+    "lastName": "Mezzo",
+    "email": "milanM44@yahoo.com",
+    "city": "Marietta",
+    "state": "Georgia",
+    "dependents": [ {"type": "adult", "name": "Jason", "age": 68}]
+  },
+  {
+    "username": "ezie34",
+    "password": "skyislimit85634",
+    "firstName": "Ezekiel",
+    "lastName": "Williams",
+    "email": "ewill8945@yahoo.com",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "dependents": [ {"type": "adult", "name": "Michael", "age": 78}]
+  },
+  {
+    "username": "anisa4587",
+    "password": "killone745",
+    "firstName": "Anita",
+    "lastName": "Jones",
+    "email": "ajones74@yahoo.com",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "dependents": [ {"type": "child", "name": "Ella", "age": 10}]
+  },
+  {
+    "username": "alex47895",
+    "password": "killone745",
+    "firstName": "Anita",
+    "lastName": "Jones",
+    "email": "ajones74@yahoo.com",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "dependents": [ {"type": "child", "name": "Ella", "age": 10}]
+  }
+]
