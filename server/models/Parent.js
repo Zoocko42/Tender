@@ -37,17 +37,16 @@ const parentSchema = new Schema({
     city: {
         type: String,
         required: true,
-        },
+    },
     state: {
         type: String,
         required: true,
-        maxLength: 2
     },
-    dependents: [dependentSchema],
     aboutUs: {
         type: String,
-        required: false,
-    }
+        required: false
+    },
+    dependents: [dependentSchema],
 });
 
 const Parent = model('Parent', parentSchema);

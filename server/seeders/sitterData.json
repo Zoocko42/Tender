@@ -1,0 +1,45 @@
+[
+    {
+        "username": "allylove",
+        "password": "Quiltlover99!",
+        "firstName": "Allison",
+        "lastName": "Quiltlove",
+        "email": "allyquilt@gmail.com",
+        "city": "Atlanta",
+        "state": "Georgia",
+        "aboutMe": "I have 3 years of experience sitting for children and dogs; I am however allergic to cats.",
+        "rating": 10
+    },
+    {
+        "username": "bradsterino",
+        "password": "Braddicus22!",
+        "firstName": "Brad",
+        "lastName": "Asterino",
+        "email": "bigbadbrad@yahoo.com",
+        "city": "Kennesaw",
+        "state": "Georgia",
+        "aboutMe": "I'm a chill guy who has tons of experience caring for pets of every kind: birds, reptiles, cats, dogs, scorpions, you name it.",
+        "rating": 7
+    },
+    {
+        "username": "mastersky",
+        "password": "LadyLucksLover11$",
+        "firstName": "Sky",
+        "lastName": "Masterson",
+        "email": "skymasterson@yahoo.com",
+        "city": "New York",
+        "state": "New York",
+        "rating": 8
+    },
+    {
+        "username": "griddle",
+        "password": "ShotThrutheHeart19!",
+        "firstName": "Gideon",
+        "lastName": "Nav",
+        "email": "muscleginger99@gmail.com",
+        "city": "Drearbrough",
+        "state": "NH",
+        "aboutMe": "I can definitely be trusted to watch out for your kids and not just give them a bunch of junk food and sword-fighting lessons.",
+        "rating": 4
+    }
+]

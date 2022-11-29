@@ -35,11 +35,13 @@ const sitterSchema = new Schema({
     state: {
         type: String,
         required: true,
-        maxLength: 2
     },
     aboutMe: {
         type: String,
         required: false
+    },
+    rating: {
+        type: Number,
     }
 })
 

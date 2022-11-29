@@ -1,5 +1,6 @@
 import './App.css';
 import Home from './components/home'
+import Nav from './components/Nav'
 import { useState } from 'react';
 
 
@@ -26,6 +27,7 @@ function App() {
   return (
     <div className="App">
       {/* jsx element */}
+      <Nav></Nav>
       <Home></Home>
     {/* <Home setcurrentPage={setcurrentPage}></Home> */}
     {currentPage}
