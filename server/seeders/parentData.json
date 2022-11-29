@@ -7,7 +7,8 @@
     "email": "lilly@gmail.com",
     "city": "Atlanta",
     "state": "Georgia",
-    "dependents": [ {"type": "child", "name": "davie", "age": 6}]
+    "dependents": [ {"type": "child", "name": "davie", "age": 6}],
+    "aboutUs": "Loving family who travels a lot! Looking for help for school pickup & drop offs."
  },
   {
     "username": "monalisa50",
@@ -17,7 +18,8 @@
     "email": "monperr56@gmail.com",
     "city": "Atlanta",
     "state": "Georgia",
-    "dependents": [ {"type": "child", "name": "Jillian", "age": 10}]
+    "dependents": [ {"type": "child", "name": "Jillian", "age": 10}],
+    "aboutUs": "Small vegeterian family . Searching for someone to provide afterschool care to energetic 10 year old."
   },
   {
     "username": "eddiepop89",
@@ -27,7 +29,8 @@
     "email": "edmw76@yahoo.com",
     "city": "Alpharetta",
     "state": "Georgia",
-    "dependents": [ {"type": "child", "name": "Ebony", "age": 2}]
+    "dependents": [ {"type": "child", "name": "Ebony", "age": 2}],
+    "aboutUs": "Family searching for a nanny between the hours of 8a-5pm M-F for 12 weeks."
   },
 {
   "username": "camiey4568",
@@ -37,7 +40,8 @@
   "email": "cammie65@yahoo.com",
   "city": "Duluth",
   "state": "Georgia",
-  "dependents": [ {"type": "child", "name": "Danni", "age": 4}]
+  "dependents": [ {"type": "child", "name": "Danni", "age": 4}],
+  "aboutUs": "Loving family looking for caregiver to assist with young child with autism between the hours of 3p-7pm Tuesd, Thurs, Friday."
 },
 {
     "username": "karenapple",
@@ -47,7 +51,8 @@
     "email": "kd19845@yahoo.com",
     "city": "johns Creek",
     "state": "Georgia",
-    "dependents": [ {"type": "pet", "name": "Neutron", "age": 4}]
+    "dependents": [ {"type": "pet", "name": "Neutron", "age": 4}],
+    "aboutUs": "searching for animal lover who can dog sit for 4 days."
   },
   {
     "username": "milano4044",
@@ -57,7 +62,8 @@
     "email": "milanM44@yahoo.com",
     "city": "Marietta",
     "state": "Georgia",
-    "dependents": [ {"type": "adult", "name": "Jason", "age": 68}]
+    "dependents": [ {"type": "adult", "name": "Jason", "age": 68}],
+    "aboutUs": "Searching for certified nursing assistant with exeprience in home health to assist with care for adult with physical disabilities."
   },
   {
     "username": "ezie34",
@@ -67,7 +73,8 @@
     "email": "ewill8945@yahoo.com",
     "city": "Atlanta",
     "state": "Georgia",
-    "dependents": [ {"type": "adult", "name": "Michael", "age": 78}]
+    "dependents": [ {"type": "adult", "name": "Michael", "age": 78}],
+    "aboutUs": "Searching for 2 caregivers to provide 24 hour care to an adult with cognitive disabilities. 8am-8pm & 8p-8am. Must have valid driver's license to assist with appointments. Flexible to cut shifts to 10 hours."
   },
   {
     "username": "anisa4587",
@@ -77,16 +84,18 @@
     "email": "ajones74@yahoo.com",
     "city": "Atlanta",
     "state": "Georgia",
-    "dependents": [ {"type": "child", "name": "Ella", "age": 10}]
+    "dependents": [ {"type": "child", "name": "Ella", "age": 10}],
+    "aboutUs": "Busy family needing a loving sitter to pickup 10 year old from school, extracurricular activities, and assist with homework when needed. Hours needed: Mon-Friday 3p-7pm, January-May."
   },
   {
     "username": "alex47895",
-    "password": "killone754",
-    "firstName": "Anna",
-    "lastName": "Jones",
-    "email": "annaj74@yahoo.com",
+    "password": "keptor663",
+    "firstName": "Jackie",
+    "lastName": "freeman",
+    "email": "freejack@yahoo.com",
     "city": "Atlanta",
     "state": "Georgia",
-    "dependents": [ {"type": "child", "name": "Ella", "age": 10}]
+    "dependents": [ {"type": "child", "name": "Zola", "age": 0}],
+    "aboutUs": "Needing sitter to assist with newborn care of infant at 10 weeks of age while Mom works. Monday-Friday 10a-4pm."
   }
 ]

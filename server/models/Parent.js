@@ -16,6 +16,7 @@ const parentSchema = new Schema({
     password: {
         type: String,
         required: true,
+        minLegnth: 3,
     },
     firstName: {
         type: String,
@@ -31,6 +32,7 @@ const parentSchema = new Schema({
         type: String, 
         required: true,
         unique: true,
+        match: [/.+@.+\..+/, 'Must match an email address!'],
     },
     city: {
         type: String,
