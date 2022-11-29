@@ -15,7 +15,6 @@ const parentSchema = new Schema({
     },
     password: {
         type: String,
-        unique: true,
         required: true,
     },
     firstName: {
@@ -40,7 +39,6 @@ const parentSchema = new Schema({
     state: {
         type: String,
         required: true,
-        maxLength: 2
     },
     aboutUs: {
         type: String,
