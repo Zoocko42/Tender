@@ -35,8 +35,16 @@ const parentSchema = new Schema({
     },
     city: {
         type: String,
-        },
-    state: {String,
+        required: true,
+    },
+    state: {
+        type: String,
+        required: true,
+        maxLength: 2
+    },
+    aboutUs: {
+        type: String,
+        required: false
     },
     dependents: [dependentSchema],
 });

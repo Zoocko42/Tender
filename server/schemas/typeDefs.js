@@ -13,9 +13,17 @@ const typeDefs = gql`
         aboutMe: String
     }
 
-    type User {
-        
+    type Parent {
+        _id: ID
+        username: String!
+        password: String!
+        email: String!
+        firstName: String!
+        lastName: String!
+        city: String!
+        state: String!
+        aboutUs: String
+        dependents: [String]
     }
-
-
 `
+module.exports = typeDefs;
