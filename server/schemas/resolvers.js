@@ -26,6 +26,40 @@ const resolvers = {
         sitterReq: async () => {
             return SitterReq.findOne({ _id: sitterReqID })
         }
+    },
+
+    Mutations: {
+        parentLogin: async (parent, {username, password}) => {
+            const parent = await Parent.findOne({username});
+
+            if (!parent) {
+                throw new AuthenticationError('No parent user found with this username')
+            }
+
+            const correctPW = await parent.isCorrectPassword(password)
+
+            if (!correctPW) {
+                throw new AuthenticationError('Password is incorrect');
+            }
+
+            return {parent};
+        },
+
+        sitterLogin: async (sitter, {username, password}) => {
+            const sitter = await Sitter.findOne({username});
+
+            if (!sitter) {
+                throw new AuthenticationError('No parent user found with this username')
+            }
+
+            const correctPW = await sitter.isCorrectPassword(password)
+
+            if (!correctPW) {
+                throw new AuthenticationError('Password is incorrect');
+            }
+
+            return {sitter};
+        }
     }
 }
 
