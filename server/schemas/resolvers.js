@@ -26,6 +26,18 @@ const resolvers = {
         sitterReq: async () => {
             return SitterReq.findOne({ _id: sitterReqID })
         }
+    },
+    Mutation: {
+        addParent: async (parent, {username, password, email, firstName, lastName, city, state, aboutUs} ) => {
+            
+            return await Parent.create({username, password, email, firstName, lastName, city, state, aboutUs});
+        },
+        addSitter: async (parent, {username, password, email, firstName, lastName, city, state, aboutMe}) => {
+            return await Sitter.create({username, password, email, firstName, lastName, city, state, aboutMe});
+        },
+        addSitterReq: async(parent, {parentUsername, date, time, price, city, state, specialRequests}) => {
+            return await SitterReq.create({parentUsername, date, time, price, city, state, specialRequests});
+        }
     }
 }
 
