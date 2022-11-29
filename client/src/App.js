@@ -1,23 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/home'
+import { useState } from 'react';
 
+
+// state is being used to render the new pages when clicked!
+// test pull req to git hub
 function App() {
+// the 0 in the useState function is representing the current page the app is rendering, can use a string
+// intial page is named current page, can change page using setcurrentpage
+// function display() {
+//   if(currentPage===0) {
+//     return <About></About>
+//   }
+//   else if (currentPage===1){
+//     return <Portfolio></Portfolio>
+//   }
+//   else if (currentPage===2){
+//     return <Contact></Contact>
+//   }
+//   else if(currentPage===3) {
+//     return <Resume></Resume>
+//   }
+// }
+  const [currentPage , setcurrentPage] = useState(0);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* jsx element */}
+      <Home></Home>
+    {/* <Home setcurrentPage={setcurrentPage}></Home> */}
+    {currentPage}
+    {/* {display()}; */}
+    
+    
+    
     </div>
   );
 }
