@@ -1,6 +1,10 @@
 const {gql} = require('apollo-server-express');
 
+
+
 const typeDefs = gql`
+    scalar Date
+
     type Sitter {
         _id: ID
         username: String!
@@ -57,11 +61,11 @@ const typeDefs = gql`
         addSitter(username: String!, password: String!, email: String!, firstName: String!, lastName: String!, city: String!, state: String!): Sitter
         loginSitter(username: String!, password: String!): Sitter
 
-        addSitterReq(parentID: Parent, parentUsername: Parent!, date: String!, time: String!, price: Int!, city: String!, state: String, specialRequests: String!, createdAt: Date): SitterReq
+        addSitterReq(parentID: ID, parentUsername: String!, date: String!, time: String!, price: Int!, city: String!, state: String, specialRequests: String!, createdAt: Date): SitterReq
 
         updateParent(username: String!, password: String!, email: String!, firstName: String!, lastName: String!, city: String!, state: String!, aboutUs: String, dependents: [String]): Parent
         updateSitter(username: String!, password: String!, email: String!, firstName: String!, lastName: String!, city: String!, state: String!, aboutMe: String, rating: Int): Sitter
-        updateSitterReq(parentID: Parent, parentUsername: Parent!, date: String!, time: String!, price: Int!, city: String!, state: String, specialRequests: String!, createdAt: Date, matched: Boolean): SitterReq
+        updateSitterReq(parentID: ID, parentUsername: String!, date: String!, time: String!, price: Int!, city: String!, state: String, specialRequests: String!, createdAt: Date, matched: Boolean): SitterReq
 
         removeParent(_id: ID!): Parent
         removeSitter(_id: ID!): Sitter
