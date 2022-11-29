@@ -17,6 +17,7 @@ const parentSchema = new Schema({
         type: String,
         unique: true,
         required: true,
+        minLegnth: 3,
     },
     firstName: {
         type: String,
@@ -32,13 +33,22 @@ const parentSchema = new Schema({
         type: String, 
         required: true,
         unique: true,
+        match: [/.+@.+\..+/, 'Must match an email address!'],
     },
     city: {
         type: String,
+        required: true,
         },
-    state: {String,
+    state: {
+        type: String,
+        required: true,
+        maxLength: 2
     },
     dependents: [dependentSchema],
+    aboutUs: {
+        type: String,
+        required: false,
+    }
 });
 
 const Parent = model('Parent', parentSchema);

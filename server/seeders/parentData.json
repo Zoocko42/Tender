@@ -7,7 +7,8 @@
     "email": "lilly@gmail.com",
     "city": "Atlanta",
     "state": "Georgia",
-    "dependents": [ {"type": "child", "name": "davie", "age": 6}]
+    "dependents": [ {"type": "child", "name": "davie", "age": 6}],
+    "aboutUs": "Loving family who travels a lot! Looking for help for school pickup & drop offs."
  },
   {
     "username": "monalisa50",
@@ -17,7 +18,8 @@
     "email": "monperr56@gmail.com",
     "city": "Atlanta",
     "state": "Georgia",
-    "dependents": [ {"type": "child", "name": "Jillian", "age": 10}]
+    "dependents": [ {"type": "child", "name": "Jillian", "age": 10}],
+    "aboutUs": "Small family who is vegeterian. Searching for someone to provide afterschool care to energetic 10 year old."
   },
   {
     "username": "eddiepop89",
@@ -27,7 +29,8 @@
     "email": "edmw76@yahoo.com",
     "city": "Alpharetta",
     "state": "Georgia",
-    "dependents": [ {"type": "child", "name": "Ebony", "age": 2}]
+    "dependents": [ {"type": "child", "name": "Ebony", "age": 2}],
+    "aboutUs": "Family searching for a nanny between the hours of 8a-5pm M-F for 12 weeks."
   },
 {
   "username": "camiey4568",
@@ -47,7 +50,8 @@
     "email": "kd19845@yahoo.com",
     "city": "johns Creek",
     "state": "Georgia",
-    "dependents": [ {"type": "pet", "name": "Neutron", "age": 4}]
+    "dependents": [ {"type": "pet", "name": "Neutron", "age": 4}],
+    "aboutUs": "searching for animal lover who can dog sit for 4 days."
   },
   {
     "username": "milano4044",
@@ -67,7 +71,8 @@
     "email": "ewill8945@yahoo.com",
     "city": "Atlanta",
     "state": "Georgia",
-    "dependents": [ {"type": "adult", "name": "Michael", "age": 78}]
+    "dependents": [ {"type": "adult", "name": "Michael", "age": 78}],
+    "aboutUs": "Cognitively impaired adult. Searching for 2 caregivers for 24 hour care. 8am-8pm & 8p-8am. Must have valid driver's license to assist with appointments. Flexible to cut shifts to 10 hours."
   },
   {
     "username": "anisa4587",

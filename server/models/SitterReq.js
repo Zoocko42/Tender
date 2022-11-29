@@ -2,23 +2,23 @@ const { Schema, model } = require('mongoose');
 
 const sitterReqSchema = new Schema ({
     parentID: {
-        type: Number,
-        
+        // type: String,
     },
     parentUsername: {
-        type: String,
+        // type: String,
         required: true,
     },
     date: {
-
+        type: Date,
+        required: true,
     },
     time: {
-
+        type: "string",
+        required: true,
     },
     price: {
         type: Number,
-
-
+        required: true,
     },
     city: {
         type: String,
@@ -26,16 +26,21 @@ const sitterReqSchema = new Schema ({
     },
     state: {
         type: String,
-// need to add length
+        maxLength: 2 
     },
     specialRequests: {
         type: String,
         required: true,
+        maxLength: 300
     },
     matched:
     {
     type: Boolean,
     },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    }
 
 });
 
