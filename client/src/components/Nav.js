@@ -1,34 +1,43 @@
 import React from 'react';
 
-export default function Nav() {
-
+export default function Nav(props) {
+ 
+    const tabs = ["Home", "About", "Login", "Help"];
+  
     return (
-        <nav className='main-header-menu'>
-            <section
-        style={{
-          display: 'flex',
-          fontFamily: 'helvetica',
-          flexDirection: 'row',
-          alignItems: 'flex-start',
-          justifyContent: 'flex-start',
-        }}
-      >
-        <div>
-          <a href="#">Home</a>
-        </div>
-        <div>
-          <a href="#">Login</a>
-        </div>
-        <div>
-          <a href="#">Signup</a>
-        </div>
-        <div>
-          <a href="#">About</a>
-        </div>
-        <div>
-          <a href="#">Help</a>
-        </div>
-        </section>
-        </nav>
-    )
-}
+  
+  
+      <div className="tabs is-centered">
+        
+  
+        {/* <!-- Latest compiled and minified CSS --> */}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></link>
+  
+        {/* <!-- Optional theme --> */}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"></link>
+  
+  
+        <ul className="nav nav-tabs">
+          {tabs.map((tab, i) => (
+            <li
+              className={
+                props.currentPage === tab ? "nav-item is-active" : "nav-item"
+              }
+              key={tab}
+            >
+              <a
+                href={"#" + tab.toLowerCase()}
+                // Whenever a tab is clicked on,
+                // the current page is set through the handlePageChange props.
+                onClick={() => props.setcurrentPage(i)}
+  
+              >
+                {tab}
+              </a>
+            </li>
+          ))}
+        </ul>
+        
+      </div>
+    );
+            };
