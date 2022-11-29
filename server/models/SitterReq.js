@@ -2,14 +2,15 @@ const { Schema, model } = require('mongoose');
 
 const sitterReqSchema = new Schema ({
     parentID: {
-        // type: String,
+        type: Schema.Types.ObjectId,
+        ref: "Parent"
     },
     parentUsername: {
-        // type: String,
+        type: String,
         required: true,
     },
     date: {
-        type: Date,
+        type: String,
         required: true,
     },
     time: {
