@@ -11,6 +11,8 @@ import SitterLogin from './components/login/sitter'
 import Signup from './components/signup/signup'
 import ParentSignup from './components/signup/parent'
 import SitterSignup from './components/signup/sitter'
+import ParentAccount from './components/accounts/paccount'
+import SitterAccount from './components/accounts/saccount'
 import Help from './components/help'
 
 const client = new ApolloClient({
@@ -34,8 +36,8 @@ return(
           <Route path='/login/parent' element={<ParentLogin />} />
           <Route path='/login/sitter' element={<SitterLogin />} />
         <Route path='/about' element={<About />} />
-      <Route path='/sitter/saccount' element={<sitterAccount></sitterAccount>}></Route>
-      <Route path="/parent/paccount" element={<parentAccount></parentAccount>}></Route>
+      <Route path='/sitter/saccount' element={<SitterAccount></SitterAccount>}></Route>
+      <Route path="/parent/paccount" element={<ParentAccount></ParentAccount>}></Route>
         
         {/* <Route path='/help' element={<Help />} /> */}
       </Routes>
