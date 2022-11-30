@@ -4,7 +4,7 @@ import React from "react";
 function About() {
     return (
         <div>
-            <p className="content is-medium"> Junior Fullstack Developer Student </p>
+            <p className="content is-medium"> Tender </p>
             <hr />
 
 
