@@ -14,16 +14,24 @@ function homepage(props) {
 
       {/* <!-- Optional theme --> */}
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"></link>
-
+{/* 
+      {function loginButtonPress(event) {
+        event.preventDefault()
+        window.location.href="/login"
+        return
+      }} */}
      
       <img className="TenderLogo" src={logo} alt="logo" />
 
+      <a href="/login">
+        <button type="submit" id="loginButton" className="loginBtn">Login
+        </button>
+      </a>
 
-      <button type="button" onclick="alert('You pressed the button!')" className="loginBtn">Login
-      </button>
-      <button type="button" onclick="alert('You pressed the button!')" className="signupBtn">Sign Up
-      </button>
-
+      <a href="/signup">
+        <button type="button" onclick="alert('You pressed the button!')" className="signupBtn">Sign Up
+        </button>
+      </a>
     </div>
 
   );

@@ -38,6 +38,7 @@ const resolvers = {
         addSitterReq: async(parent, {submittedBy, date, time, price, city, state, specialRequests}) => {
             return await SitterReq.create({submittedBy, date, time, price, city, state, specialRequests});
         },
+    
         loginParent: async (parent, {username, password}) => {
             const user = await Parent.findOne({username});
 
