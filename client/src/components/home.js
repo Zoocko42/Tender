@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../IMG/tenderLogoNoBack.png"
+import {Link} from "react-router-dom"
 
 function homepage() {
 
@@ -22,16 +23,15 @@ function homepage() {
       }} */}
      
       <img className="TenderLogo" src={logo} alt="logo" />
-
-      <a href="/login">
+      <Link to="/login">
         <button type="submit" id="loginButton" className="loginBtn">Login
         </button>
-      </a>
+      </Link>
 
-      <a href="/signup">
+      <Link to="/signup">
         <button type="button" onClick="alert('You pressed the button!')" className="signupBtn">Sign Up
         </button>
-      </a>
+      </Link>
     </div>
 
   );

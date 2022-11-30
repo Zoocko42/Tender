@@ -1,18 +1,19 @@
 import React from 'react';
+import {Link} from "react-router-dom"
 
  function signup() {
    
     return (
 
         <div className='accounts'>
-            <a href="/parent">
+            <Link to="/signup/parent">
             <button type="button" onClick="alert('You pressed the button!')" className="parentBtn"> Parent Account 
             </button>
-            </a>
-            <a href="/sitter">
+            </Link>
+            <Link to="/signup/sitter">
             <button type="button" onClick="alert('You pressed the button!')" className="sitterBtn">Sitter Account
             </button>
-            </a>
+            </Link>
         </div>
     );
 }

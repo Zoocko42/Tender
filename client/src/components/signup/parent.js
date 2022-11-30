@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
-function parent() {
+function ParentSignup() {
     return (
         <form>
 
@@ -43,5 +43,5 @@ function parent() {
 }
 
 
-export default parent;
+export default ParentSignup;
 
