@@ -27,8 +27,15 @@ const resolvers = {
             return SitterReq.findOne({ _id: sitterReqID })
         }
     },
-
     Mutation: {
+        addParent: async (parent, {username, password, email, firstName, lastName, city, state, aboutUs} ) => {
+            
+            return await Parent.create({username, password, email, firstName, lastName, city, state, aboutUs});
+        },
+        addSitter: async (parent, {username, password, email, firstName, lastName, city, state, aboutMe}) => {
+            return await Sitter.create({username, password, email, firstName, lastName, city, state, aboutMe});
+        }
+        },
         loginParent: async (parent, {username, password}) => {
             const user = await Parent.findOne({username});
 
@@ -61,6 +68,5 @@ const resolvers = {
             return {sitter};
         }
     }
-}
-
+    
 module.exports = resolvers;
