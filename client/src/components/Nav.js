@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Nav(props) {
  
-    const tabs = ["Home", "About", "Login", "Help"];
+    const tabs = ["About", "Login", "Help"];
   
     return (
   
@@ -18,6 +18,9 @@ export default function Nav(props) {
   
   
         <ul className="nav nav-tabs">
+            <li>
+                <a className='nav-item' href="/">Home</a>
+            </li>
           {tabs.map((tab, i) => (
             <li
               className={
@@ -26,7 +29,7 @@ export default function Nav(props) {
               key={tab}
             >
               <a
-                href={"#" + tab.toLowerCase()}
+                href={tab.toLowerCase()}
                 // Whenever a tab is clicked on,
                 // the current page is set through the handlePageChange props.
                 onClick={() => props.setcurrentPage(i)}
@@ -40,4 +43,4 @@ export default function Nav(props) {
         
       </div>
     );
-            };
+};
