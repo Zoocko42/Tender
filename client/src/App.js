@@ -6,7 +6,7 @@ import Home from './components/home'
 import Nav from './components/Nav'
 import About from './components/about'
 import Login from './components/login'
-import Signup from './components/signup'
+import Signup from './components/signup/signup'
 import Help from './components/help'
 
 const client = new ApolloClient({
