@@ -34,11 +34,8 @@ const resolvers = {
         },
         addSitter: async (parent, {username, password, email, firstName, lastName, city, state, aboutMe}) => {
             return await Sitter.create({username, password, email, firstName, lastName, city, state, aboutMe});
-        },
-        addSitterReq: async(parent, {parentUsername, date, time, price, city, state, specialRequests}) => {
-            return await SitterReq.create({parentUsername, date, time, price, city, state, specialRequests});
+        }
         }
     }
-}
 
 module.exports = resolvers;
