@@ -34,6 +34,8 @@ return(
           <Route path='/login/parent' element={<ParentLogin />} />
           <Route path='/login/sitter' element={<SitterLogin />} />
         <Route path='/about' element={<About />} />
+      <Route path='/sitter/saccount' element={<sitterAccount></sitterAccount>}></Route>
+      <Route path="/parent/paccount" element={<parentAccount></parentAccount>}></Route>
         
         {/* <Route path='/help' element={<Help />} /> */}
       </Routes>
