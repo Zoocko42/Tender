@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../IMG/Tender Logo WIP.png"
+import logo from "../IMG/tenderLogoNoBack.png"
 
 function homepage(props) {
 

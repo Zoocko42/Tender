@@ -28,11 +28,11 @@ const resolvers = {
         }
     },
 
-    Mutations: {
-        parentLogin: async (parent, {username, password}) => {
-            const parent = await Parent.findOne({username});
+    Mutation: {
+        loginParent: async (parent, {username, password}) => {
+            const user = await Parent.findOne({username});
 
-            if (!parent) {
+            if (!user) {
                 throw new AuthenticationError('No parent user found with this username')
             }
 
@@ -42,10 +42,10 @@ const resolvers = {
                 throw new AuthenticationError('Password is incorrect');
             }
 
-            return {parent};
+            return {user};
         },
 
-        sitterLogin: async (sitter, {username, password}) => {
+        loginSitter: async (parent, {username, password}) => {
             const sitter = await Sitter.findOne({username});
 
             if (!sitter) {
