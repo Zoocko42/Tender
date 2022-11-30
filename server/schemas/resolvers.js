@@ -34,8 +34,8 @@ const resolvers = {
         },
         addSitter: async (parent, {username, password, email, firstName, lastName, city, state, aboutMe}) => {
             return await Sitter.create({username, password, email, firstName, lastName, city, state, aboutMe});
-        }
         },
+        
         loginParent: async (parent, {username, password}) => {
             const user = await Parent.findOne({username});
 
@@ -67,6 +67,7 @@ const resolvers = {
 
             return {sitter};
         }
-    }
-    
+    },
+}
+
 module.exports = resolvers;
