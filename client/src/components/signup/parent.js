@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import React from 'react';
 
-// test pull req
+//good to go!
 function parent() {
     return (
         <form>
