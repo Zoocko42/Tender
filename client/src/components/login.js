@@ -29,7 +29,7 @@ export default function MyForm() {
         <input 
           type="text" 
           name="password" 
-          value={inputs.age || ""} 
+          value={inputs.password || ""} 
           onChange={handleChange}
         />
         </label>
