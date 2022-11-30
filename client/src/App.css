@@ -3,7 +3,7 @@
 }
 
 .loginBtn {
-   background-color: #04AA6D;
+  background-color: #04AA6D;
   border-radius: 200px;
   font-weight: bolder;
   font-size: large;
@@ -16,8 +16,31 @@
   background-color: #04AA6D;
   border-radius: 200px;
   font-size: large;
- font-weight: bolder;
+  font-weight: bolder;
   margin-left: 100px;
   width: 150px;
   height: 100px;
+}
+
+.parentBtn {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+  font-weight: bolder;
+  background-color: rosybrown;
+  border-radius: 50%;
+  margin-top: 200px;
+  margin-left: 300px;
+  height: 300px;
+  width: 300px;
+}
+
+.sitterBtn {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+  font-weight: bolder;
+  background-color: rosybrown;
+  border-radius: 50%;
+  margin-left: 250px;
+  height: 300px;
+  width: 300px;
 }
