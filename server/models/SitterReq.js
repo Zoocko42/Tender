@@ -1,13 +1,10 @@
 const { Schema, model } = require('mongoose');
 
 const sitterReqSchema = new Schema ({
-    parentID: {
+    submittedBy: {
         type: Schema.Types.ObjectId,
         ref: "Parent"
-    },
-    parentUsername: {
-        type: String,
-        required: true,
+        // required: true,
     },
     date: {
         type: String,
@@ -45,6 +42,6 @@ const sitterReqSchema = new Schema ({
 
 });
 
-const Sitterreq = model('sitterReq', sitterReqSchema);
+const Sitterreq = model('SitterReq', sitterReqSchema);
 
 module.exports = Sitterreq;

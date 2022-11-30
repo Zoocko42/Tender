@@ -29,12 +29,12 @@ const typeDefs = gql`
         state: String!
         aboutUs: String
         dependents: [String]
+        sitterRequests: SitterReq
     }
 
     type SitterReq {
         _id: ID
-        parentID: Parent
-        parentUsername: Parent!
+        submittedBy: ID
         date: String!
         time: String!
         price: Int!
@@ -61,7 +61,7 @@ const typeDefs = gql`
         addSitter(username: String!, password: String!, email: String!, firstName: String!, lastName: String!, city: String!, state: String!, aboutMe: String): Sitter
         loginSitter(username: String!, password: String!): Sitter
 
-        addSitterReq(parentID: ID, parentUsername: String!, date: String!, time: String!, price: Int!, city: String!, state: String, specialRequests: String!, createdAt: Date): SitterReq
+        addSitterReq(submittedBy: ID, date: String!, time: String!, price: Int!, city: String!, state: String, specialRequests: String!, createdAt: Date): SitterReq
 
         updateParent(username: String!, password: String!, email: String!, firstName: String!, lastName: String!, city: String!, state: String!, aboutUs: String, dependents: [String]): Parent
         

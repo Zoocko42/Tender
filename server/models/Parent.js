@@ -47,6 +47,10 @@ const parentSchema = new Schema({
         required: false
     },
     dependents: [dependentSchema],
+    sitterRequests: [
+        { type: Schema.Types.ObjectId,
+        ref: "SitterReq"}
+    ],
 });
 
 const Parent = model('Parent', parentSchema);
