@@ -48,6 +48,10 @@ const parentSchema = new Schema({
         required: false
     },
     dependents: [dependentSchema],
+    sitterRequests: [
+        { type: Schema.Types.ObjectId,
+        ref: "SitterReq"}
+    ],
 });
 
 parentSchema.pre('save', async function (next) {
