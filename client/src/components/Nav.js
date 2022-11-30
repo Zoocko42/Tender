@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 export default function Nav(props) {
  
@@ -19,9 +20,20 @@ export default function Nav(props) {
   
         <ul className="nav nav-tabs">
             <li>
-                <a className='nav-item' href="/">Home</a>
+                <Link className='nav-item' to="/">Home</Link>
             </li>
-          {tabs.map((tab, i) => (
+            <li>
+                <Link className='nav-item' to="/about">About</Link>
+            </li>
+            <li>
+                <Link className='nav-item' to="/login">Login</Link>
+            </li>
+            <li>
+                <Link className='nav-item' to="/help">Help</Link>
+            </li>
+
+            {/* The below code had an issue where it would add the selected link to the end of the current URL; as such it could only effectively be used from the home page. */}
+          {/* {tabs.map((tab, i) => (
             <li
               className={
                 props.currentPage === tab ? "nav-item is-active" : "nav-item"
@@ -38,7 +50,7 @@ export default function Nav(props) {
                 {tab}
               </a>
             </li>
-          ))}
+          ))} */}
         </ul>
         
       </div>

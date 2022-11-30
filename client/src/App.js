@@ -5,8 +5,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/home'
 import Nav from './components/Nav'
 import About from './components/about'
-import Login from './components/login'
+import Login from './components/login/login'
+import ParentLogin from './components/login/parent'
+import SitterLogin from './components/login/sitter'
 import Signup from './components/signup/signup'
+import ParentSignup from './components/signup/parent'
+import SitterSignup from './components/signup/sitter'
 import Help from './components/help'
 
 const client = new ApolloClient({
@@ -24,7 +28,11 @@ return(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path='/login' element={<Login />} />
+          <Route path="/signup/parent" element={<ParentSignup />} />
+          <Route path="/signup/sitter" element={<SitterSignup />} />
+        <Route path='/login' element={<Login/>}/>
+          <Route path='/login/parent' element={<ParentLogin />} />
+          <Route path='/login/sitter' element={<SitterLogin />} />
         <Route path='/about' element={<About />} />
         
         {/* <Route path='/help' element={<Help />} /> */}

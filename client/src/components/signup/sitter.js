@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
-function sitter() {
+function SitterSignup() {
 
     return (
         <form>
@@ -36,4 +36,4 @@ function sitter() {
     );
 }
 
-export default sitter;
+export default SitterSignup;
