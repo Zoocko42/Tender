@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../IMG/tenderLogoNoBack.png"
 
-function homepage(props) {
+function homepage() {
 
   return (
 
@@ -29,7 +29,7 @@ function homepage(props) {
       </a>
 
       <a href="/signup">
-        <button type="button" onclick="alert('You pressed the button!')" className="signupBtn">Sign Up
+        <button type="button" onClick="alert('You pressed the button!')" className="signupBtn">Sign Up
         </button>
       </a>
     </div>
