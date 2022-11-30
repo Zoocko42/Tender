@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const bcrypt = require('bcrypt');
 
 const sitterSchema = new Schema({
     username: {
@@ -43,7 +44,21 @@ const sitterSchema = new Schema({
     rating: {
         type: Number,
     }
-})
+});
+
+sitterSchema.pre('save', async function (next) {
+    if (this.isNew || this.isModified('password')) {
+      const saltRounds = 10;
+      this.password = await bcrypt.hash(this.password, saltRounds);
+    }
+  
+    next();
+  });
+  
+  // compare the incoming password with the hashed password
+sitterSchema.methods.isCorrectPassword = async function (password) {
+return bcrypt.compare(password, this.password);
+};
 
 const Sitter = model('Sitter', sitterSchema);
 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
-function MyForm() {
+export default function MyForm() {
   const [inputs, setInputs] = useState({});
 
   const handleChange = (event) => {
@@ -29,14 +29,15 @@ function MyForm() {
         <input 
           type="text" 
           name="password" 
-          value={inputs.age || ""} 
+          value={inputs.password || ""} 
           onChange={handleChange}
         />
         </label>
-        <input type="submitButton" />
+        <input type="button" name="submitButton" value="Submit!"/>
     </form>
   )
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<MyForm />);
+
