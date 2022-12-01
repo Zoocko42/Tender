@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import { SITTER_REQUESTS } from '../../utils/queries';
 import {Button,Form } from 'react-bootstrap';
 
@@ -7,7 +7,8 @@ import {Button,Form } from 'react-bootstrap';
 
 const Parentaccount = () => {
 const { loading, data } = useQuery(SITTER_REQUESTS);
-
+const [] = useMutation()
+const [createdReq, setcreatedReq] = useState({});
 
 const sitreqs = data?.sitterReqs;
 const log = console.log(sitreqs);
@@ -16,7 +17,7 @@ const log = console.log(sitreqs);
 
 const submit = () => {
    
-console.log("this should make a create and or pop up a form");
+console.log("this should store the form information");
 ;
   
 };
@@ -78,7 +79,12 @@ console.log("this should make a create and or pop up a form");
             {loading ? (
                 <div> L O A D I N G  . . . PATIENCE MY FRIEND!</div>
             ) : (
-                <p sitreqs= {sitreqs} log= {log}> {sitreqs[0].city} {sitreqs[0].time} {sitreqs[0].price} {sitreqs[0].specialRequests} {sitreqs[0].date} </p>
+               <ul>
+                {sitreqs.map((reqs) => (
+                    <li key={reqs}> {reqs.city} {reqs.time} {reqs.price} {reqs.specialRequests} {reqs.date} </li>
+                ))}
+               </ul>
+                // <p sitreqs= {sitreqs} log= {log}> {sitreqs[0].city} {sitreqs[0].time} {sitreqs[0].price} {sitreqs[0].specialRequests} {sitreqs[0].date} </p>
             )} 
             </div>
 
