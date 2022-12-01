@@ -1,46 +1,86 @@
-import { useState } from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom"
+import { useMutation } from '@apollo/client';
+import {LOGIN_SITTER} from '../../utils/mutations'
 
-export default function MyForm() {
-  const [inputs, setInputs] = useState({});
+import Auth from '../../utils/auth'
+
+const Login = (props) => {
+  const [formState, setformState] = useState({ username:'', password:''});
+  const [login, {error, data}] = useMutation(LOGIN_SITTER);
 
   const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setInputs(values => ({ ...values, [name]: value }))
-  }
+    const {name, value} = event.target;
 
-  const handleSubmit = (event) => {
+    setformState({ ...formState, 
+      [name]: value, });
+  };
+  
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    alert(inputs);
+    console.log(formState);
+    try {
+      const { data } = await login({
+        variables: { ...formState }
+      });
+
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
+    }
+
+    setformState({
+      username: '',
+      password: ''
+    })
   }
 
   return (
+    <div>
+    {data ? (
+      <div className='sitterLoginSuccess'>
+        <p>You're logged in! Please continue to your homepage!</p>
+        <p><Link to='/sitter/saccount'>Continue</Link></p>
+      </div>
+    ) : (
     <form onSubmit={handleSubmit}>
-      <label>username:
+      
+      <label>Username:
         <input
+          className='form-input'
           type="text"
           name="username"
-          value={inputs.username || ""}
+          placeholder='username'
+          value={formState.username}
           onChange={handleChange}
         />
       </label>
-      <label>password:
+      <label>Password:
         <input
-          type="text"
+          className='form-input'
+          type="password"
           name="password"
-          value={inputs.password || ""}
+          placeholder='********'
+          value={formState.password}
           onChange={handleChange}
         />
       </label>
-      <Link to="/sitter/saccount">
-        <input type="button" name="submitButton" value="Login" />
-      </Link>
-
+      <button
+        className='btn btn-block btn-primary'
+        style={{cursor: 'pointer'}}
+        type="submit"
+      >
+        Login!
+      </button>
     </form>
+    )}
+
+    {error && (
+      <div className="my-3 p-3 bg-danger text-white">
+        {error.message}
+      </div>
+    )}
+    </div>
   )
 }
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<MyForm />);
+export default Login;
