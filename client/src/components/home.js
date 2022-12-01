@@ -3,6 +3,8 @@ import logo from "../IMG/tenderLogoNoBack.png"
 import {Link} from "react-router-dom"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import Auth from '../utils/auth';
+
 function homepage() {
 
   return (
@@ -16,8 +18,9 @@ function homepage() {
 
       {/* <!-- Optional theme --> */}
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"></link>
-     
+
       <img className="TenderLogo" src={logo} alt="logo" />
+      {Auth.loggedIn()?(<></>):(<>
       <Link to="/login">
         <button type="submit" id="loginButton" className="loginBtn">Login
         </button>
@@ -27,6 +30,7 @@ function homepage() {
         <button type="button" onClick="alert('You pressed the button!')" className="signupBtn">Sign Up
         </button>
       </Link>
+      </>)}
     </div>
 
   );
