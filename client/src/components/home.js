@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../IMG/tenderLogoNoBack.png"
 import {Link} from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function homepage() {
 
@@ -15,12 +16,6 @@ function homepage() {
 
       {/* <!-- Optional theme --> */}
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"></link>
-{/* 
-      {function loginButtonPress(event) {
-        event.preventDefault()
-        window.location.href="/login"
-        return
-      }} */}
      
       <img className="TenderLogo" src={logo} alt="logo" />
       <Link to="/login">

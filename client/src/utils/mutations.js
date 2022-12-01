@@ -35,12 +35,12 @@ mutation LoginParent($username: String!, $password: String!) {
 
 export const LOGIN_SITTER = gql`
 mutation Mutation($username: String!, $password: String!) {
-    loginSitter(username: $username, password: $password) {
-      token
-      user {
-        _id
-        username
-      }
+  loginSitter(username: $username, password: $password) {
+    token
+    user {
+      _id
+      username
     }
   }
+}
 `

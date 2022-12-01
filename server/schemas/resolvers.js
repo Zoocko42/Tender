@@ -65,20 +65,20 @@ const resolvers = {
         },
 
         loginSitter: async (parent, {username, password}) => {
-            const sitter = await Sitter.findOne({username});
+            const user = await Sitter.findOne({username});
 
-            if (!sitter) {
+            if (!user) {
                 throw new AuthenticationError('No parent user found with this username')
             }
 
-            const correctPW = await sitter.isCorrectPassword(password)
+            const correctPW = await user.isCorrectPassword(password)
 
             if (!correctPW) {
                 throw new AuthenticationError('Password is incorrect');
             }
 
-            const token = signToken(sitter);
-            return {token, sitter};
+            const token = signToken(user);
+            return {token, user};
         },
 
         updateSitterReq: async (parent, {id, date, time, price,city, state, matched, specialRequests } ) => {
