@@ -1,3 +1,4 @@
+
 import { gql } from "@apollo/client";
 
 export const ADDSITTER = gql`
@@ -18,5 +19,28 @@ mutation addSitter($username: String!, $password: String!, $email: String!, $fir
   
     }
   }
-  
+ `
+
+export const LOGIN_PARENT = gql`
+mutation LoginParent($username: String!, $password: String!) {
+    loginParent(username: $username, password: $password) {
+      token
+      user {
+        _id
+        username
+      }
+    }
+  }
+`
+
+export const LOGIN_SITTER = gql`
+mutation Mutation($username: String!, $password: String!) {
+    loginSitter(username: $username, password: $password) {
+      token
+      user {
+        _id
+        username
+      }
+    }
+  }
 `
