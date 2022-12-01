@@ -77,11 +77,11 @@ const typeDefs = gql`
         
         updateSitter(username: String!, password: String!, email: String!, firstName: String!, lastName: String!, city: String!, state: String!, aboutMe: String, rating: Int): AuthSitter
         
-        updateSitterReq(parentID: ID, parentUsername: String!, date: String!, time: String!, price: Int!, city: String!, state: String, specialRequests: String!, createdAt: Date, matched: Boolean): SitterReq
+        updateSitterReq(sitterReqID: ID!, date: String, time: String, price: Int, city: String, state: String, specialRequests: String, matched: Boolean): SitterReq
 
         removeParent(_id: ID!): Parent
         removeSitter(_id: ID!): Sitter
-        removeSitterReq(_id: ID!): SitterReq
+        removeSitterReq(sitterReqID: ID!): SitterReq
     }
 `
 module.exports = typeDefs;

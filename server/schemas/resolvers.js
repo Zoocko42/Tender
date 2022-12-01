@@ -79,6 +79,19 @@ const resolvers = {
 
             const token = signToken(sitter);
             return {token, sitter};
+        },
+
+        updateSitterReq: async (parent, {id, date, time, price,city, state, matched, specialRequests } ) => {
+            return await SitterReq.findOneAndUpdate(
+                {sitterReqID: id},
+                {date, time, price, city, state, matched, specialRequests}, 
+                {new:true}
+                );
+        },
+
+        removeSitterReq: async (parent, {sitterReqID}) => {
+            console.log(sitterReqID);
+            return SitterReq.findOneAndDelete ( { _id: sitterReqID});
         }
     }
 }
