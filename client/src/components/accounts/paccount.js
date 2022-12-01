@@ -7,7 +7,7 @@ import { SITTER_REQUESTS } from '../../utils/queries';
 const Parentaccount = () => {
 const { loading, data } = useQuery(SITTER_REQUESTS);
 
-const sitreqs = data?.sitterReqs || [];
+const sitreqs = data?.sitterReqs;
 const log = console.log(sitreqs);
 
     return (
@@ -29,9 +29,8 @@ const log = console.log(sitreqs);
             {loading ? (
                 <div> L O A D I N G  . . . PATIENCE MY FRIEND!</div>
             ) : (
-                <li sitReqs= {sitreqs} log= {log}> </li>
+                <p sitreqs= {sitreqs} log= {log}> {sitreqs[0].city} {sitreqs[0].time} {sitreqs[0].price} {sitreqs[0].specialRequests} {sitreqs[0].date} </p>
             )} 
-
             </div>
         </div>
     )
