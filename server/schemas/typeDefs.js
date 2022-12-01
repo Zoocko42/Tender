@@ -45,6 +45,16 @@ const typeDefs = gql`
         createdAt: Date
     }
 
+    type AuthParent {
+        token: ID!
+        user: Parent
+    }
+
+    type AuthSitter {
+        token: ID!
+        user: Sitter
+    }
+
     type Query {
         sitters: [Sitter]
         sitter(sitterUsername: String!): Sitter
@@ -55,17 +65,17 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        addParent(username: String!, password: String!, email: String!, firstName: String!, lastName: String!, city: String!, state: String!, aboutUs: String): Parent
-        loginParent(username: String!, password: String!): Parent
+        addParent(username: String!, password: String!, email: String!, firstName: String!, lastName: String!, city: String!, state: String!, aboutUs: String): AuthParent
+        loginParent(username: String!, password: String!): AuthParent
 
-        addSitter(username: String!, password: String!, email: String!, firstName: String!, lastName: String!, city: String!, state: String!, aboutMe: String): Sitter
-        loginSitter(username: String!, password: String!): Sitter
+        addSitter(username: String!, password: String!, email: String!, firstName: String!, lastName: String!, city: String!, state: String!, aboutMe: String): AuthSitter
+        loginSitter(username: String!, password: String!): AuthSitter
 
         addSitterReq(submittedBy: ID, date: String!, time: String!, price: Int!, city: String!, state: String, specialRequests: String!, createdAt: Date): SitterReq
 
-        updateParent(username: String!, password: String!, email: String!, firstName: String!, lastName: String!, city: String!, state: String!, aboutUs: String, dependents: [String]): Parent
+        updateParent(username: String!, password: String!, email: String!, firstName: String!, lastName: String!, city: String!, state: String!, aboutUs: String, dependents: [String]): AuthParent
         
-        updateSitter(username: String!, password: String!, email: String!, firstName: String!, lastName: String!, city: String!, state: String!, aboutMe: String, rating: Int): Sitter
+        updateSitter(username: String!, password: String!, email: String!, firstName: String!, lastName: String!, city: String!, state: String!, aboutMe: String, rating: Int): AuthSitter
         
         updateSitterReq(sitterReqID: ID!, date: String, time: String, price: Int, city: String, state: String, specialRequests: String, matched: Boolean): SitterReq
 
