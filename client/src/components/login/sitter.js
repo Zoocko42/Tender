@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom"
 import { useMutation } from '@apollo/client';
 import {LOGIN_SITTER} from '../../utils/mutations'
@@ -7,20 +6,22 @@ import {LOGIN_SITTER} from '../../utils/mutations'
 import Auth from '../../utils/auth'
 
 const Login = (props) => {
-  const [inputs, setInputs] = useState({ username:'', password:''});
-  const [login, {error, data}] = useMutation(LOGIN_SITTER)
+  const [formState, setformState] = useState({ username:'', password:''});
+  const [login, {error, data}] = useMutation(LOGIN_SITTER);
 
   const handleChange = (event) => {
     const {name, value} = event.target;
 
-    setInputs({ ...inputs, [name]: value })
-  }
+    setformState({ ...formState, 
+      [name]: value, });
+  };
   
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log(formState);
     try {
-      const {data} = await login({
-        variables: {...inputs}
+      const { data } = await login({
+        variables: { ...formState }
       });
 
       Auth.login(data.login.token);
@@ -28,7 +29,7 @@ const Login = (props) => {
       console.error(e);
     }
 
-    setInputs({
+    setformState({
       username: '',
       password: ''
     })
@@ -50,7 +51,7 @@ const Login = (props) => {
           type="text"
           name="username"
           placeholder='username'
-          value={inputs.username || ""}
+          value={formState.username}
           onChange={handleChange}
         />
       </label>
@@ -60,7 +61,7 @@ const Login = (props) => {
           type="password"
           name="password"
           placeholder='********'
-          value={inputs.password || ""}
+          value={formState.password}
           onChange={handleChange}
         />
       </label>
@@ -74,11 +75,11 @@ const Login = (props) => {
     </form>
     )}
 
-      {error && (
-        <div className="my-3 p-3 bg-danger text-white">
-          {error.message}
-        </div>
-      )}
+    {error && (
+      <div className="my-3 p-3 bg-danger text-white">
+        {error.message}
+      </div>
+    )}
     </div>
   )
 }

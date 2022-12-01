@@ -1,6 +1,5 @@
 // These imports are from the npm packages.
 import './App.css';
-import { useState } from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -17,7 +16,6 @@ import ParentSignup from './components/signup/parent'
 import SitterSignup from './components/signup/sitter'
 import ParentAccount from './components/accounts/paccount'
 import SitterAccount from './components/accounts/saccount'
-import Help from './components/help'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -61,37 +59,6 @@ return(
     </Router>
   </ApolloProvider>
 );
-
-// the 0 in the useState function is representing the current page the app is rendering, can use a string
-// intial page is named current page, can change page using setcurrentpage
-// function display() {
-//   if(currentPage===1) {
-//     return <About></About>
-//   }
-//   // else if (currentPage===1){
-//   //   return <Login></Login>
-//   // }
-//   else if (currentPage===2){
-//     return <Signup></Signup>
-//   }
-//   else if(currentPage===3) {
-//     return <Help></Help>
-//   }
-// }
-//   const [currentPage , setcurrentPage] = useState(0);
-//   return (
-//     <div className="App">
-//       {/* jsx element */}
-//       <Nav setcurrentPage={setcurrentPage}></Nav>
-      
-//     <Home setcurrentPage={setcurrentPage}></Home>
-//     {currentPage}
-//     {display()};
-    
-    
-    
-//     </div>
-//   );
 }
 
 
