@@ -3,6 +3,8 @@ import React from 'react';
 
 function ParentSignup() {
     return (
+
+
         <form>
 
             <input type='text' className='username' placeholder='Username'>
@@ -21,8 +23,7 @@ function ParentSignup() {
             </input>
             <input type="text" className='name' placeholder='name'>
             </input>
-            <input type="text" className='type' placeholder='type'>
-            </input>
+
             <input type='text' className='lastname' placeholder='Lastname'>
 
             </input>
@@ -38,6 +39,7 @@ function ParentSignup() {
             </button>
 
         </form>
+
     );
 }
 

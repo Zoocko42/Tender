@@ -44,3 +44,75 @@
   height: 300px;
   width: 300px;
 }
+
+.sitterjobs {
+  border-bottom: 100px cadetblue;
+  height: 200px;
+  width: 200px;
+
+  margin-left: 500px;
+}
+
+.sitterProfile {
+  padding: 20px;
+  background-color: rosybrown;
+  border-radius: 50%;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 100px;
+  margin-left: 1000px;
+  height: 200px;
+  width: 200px;
+
+
+}
+
+.parentProfile {
+margin-left: 170px;
+margin-bottom: -100px;
+}
+
+.makereq {
+  border-radius: 50%;
+  background-color: rosybrown;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  margin-left: 300px;
+  height: 200px;
+  width: 200px;
+  margin-top: 250px;
+
+}
+
+.req {
+  margin-top: -400px;
+  margin-left: 900px;
+}
+
+.parentLogBtn {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+  font-weight: bolder;
+  background-color: rosybrown;
+  border-radius: 50%;
+  margin-left: 500px;
+  height: 150px;
+  width: 500px;
+  margin-top: 200px;
+
+}
+
+.sitterLogBtn {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+  font-weight: bolder;
+  background-color: rosybrown;
+  border-radius: 50%;
+  margin-left: 500px;
+  height: 150px;
+  width: 500px;
+  margin-top: 20px;
+
+}
+
+/* still need to figure out how to style sign up pages! brain currently overload... */

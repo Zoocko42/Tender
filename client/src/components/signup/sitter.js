@@ -34,8 +34,8 @@ const [addSitter] = useMutation(ADDSITTER)
                     
                 </input>
             </label>
-
-            <button type="button" onClick="alert('You pressed the button!')" className="sitterSignBtn">Sign up!
+          
+            <button type="button" onClick="alert('You pressed the button!')" className="sitterSignBtn" value="Submit">Sign up!
             {/* <input type="button" name="submitButton" value="Submit!"/> */}
             </button>
 

@@ -20,6 +20,7 @@ const log = console.log(sitreqs);
             </button>
 
             {/* The following below is the current req of parents req */}
+
             <h1>
                 Current Sitter Requests
                 
@@ -32,6 +33,7 @@ const log = console.log(sitreqs);
                 <p sitreqs= {sitreqs} log= {log}> {sitreqs[0].city} {sitreqs[0].time} {sitreqs[0].price} {sitreqs[0].specialRequests} {sitreqs[0].date} </p>
             )} 
             </div>
+
         </div>
     )
 }
