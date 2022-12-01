@@ -14,7 +14,7 @@ import SitterLogin from './components/login/sitter'
 import Signup from './components/signup/signup'
 import ParentSignup from './components/signup/parent'
 import SitterSignup from './components/signup/sitter'
-import ParentAccount from './components/accounts/paccount'
+import Parentaccount from './components/accounts/paccount'
 import SitterAccount from './components/accounts/saccount'
 
 const httpLink = createHttpLink({
@@ -52,7 +52,7 @@ return(
           <Route path='/login/sitter' element={<SitterLogin />} />
         <Route path='/about' element={<About />} />
       <Route path='/sitter/saccount' element={<SitterAccount></SitterAccount>}></Route>
-      <Route path="/parent/paccount" element={<ParentAccount></ParentAccount>}></Route>
+      <Route path="/parent/paccount" element={<Parentaccount></Parentaccount>}></Route>
         
         {/* <Route path='/help' element={<Help />} /> */}
       </Routes>

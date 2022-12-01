@@ -69,8 +69,9 @@ mutation Mutation($date: String!, $time: String!, $price: Int!, $city: String!, 
       time
       price
       city
-      _id
+      state
       submittedBy
+      specialReq
     }
   }
 `
