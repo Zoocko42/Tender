@@ -4,7 +4,6 @@ const sitterReqSchema = new Schema ({
     submittedBy: {
         type: Schema.Types.ObjectId,
         ref: "Parent"
-        // required: true,
     },
     date: {
         type: String,
