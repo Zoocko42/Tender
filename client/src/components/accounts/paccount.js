@@ -11,12 +11,13 @@ function parentAccount() {
             </button>
 
             {/* The following below is the current req of parents req */}
-            <h1>
+            <h1 className="req">
                 Current Requests
+                <li>
+                    
+                </li>
             </h1>
-            <li>
-
-            </li>
+            
 
         </div>
     )
