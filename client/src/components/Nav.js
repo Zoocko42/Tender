@@ -33,20 +33,24 @@ export default function Nav(props) {
             <Link className='nav-item' >Profile</Link>
           </li>
           <li>
+            <a className='nav-item' rel="noreferrer" href="https://github.com/Spugety/Tender/issues" target="_blank">Report Issues</a>
+          </li>
+          <li>
             <button className="btn btn-lg btn-light m-2" onClick={logout}>Logout</button>
           </li>
           </> 
           ) : (
             <>
             <li>
+              <a className='nav-item' rel="noreferrer" href="https://github.com/Spugety/Tender/issues" target="_blank">Report Issues</a>
+            </li>
+            <li>
               <Link className='nav-item' to="/login">Login</Link>
             </li>
             </>
           )}
           {/* This is a link to the Github Issues page. */}
-          <li>
-            <a className='nav-item' rel="noreferrer" href="https://github.com/Spugety/Tender/issues" target="_blank">Report Issues</a>
-          </li>
+
       </ul>
     </div>
   );

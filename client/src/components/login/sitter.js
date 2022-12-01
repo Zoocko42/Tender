@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom"
 import { useMutation } from '@apollo/client';
 import {LOGIN_SITTER} from '../../utils/mutations'
 
@@ -23,8 +22,8 @@ const Login = (props) => {
       const { data } = await login({
         variables: { ...formState }
       });
-
-      Auth.login(data.login.token);
+      console.log(data)
+      Auth.login(data.loginSitter.token);
     } catch (e) {
       console.error(e);
     }
@@ -40,7 +39,6 @@ const Login = (props) => {
     {data ? (
       <div className='sitterLoginSuccess'>
         <p>You're logged in! Please continue to your homepage!</p>
-        <p><Link to='/sitter/saccount'>Continue</Link></p>
       </div>
     ) : (
     <form onSubmit={handleSubmit}>
