@@ -77,7 +77,6 @@ const resolvers = {
                 throw new AuthenticationError('Password is incorrect');
             }
 
-
             const token = signToken(sitter);
             return {token, sitter};
         },

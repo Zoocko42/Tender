@@ -1,7 +1,11 @@
+// These imports are from the npm packages.
 import './App.css';
 import { useState } from 'react';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// The following imports are bringing in component pages.
 import Home from './components/home'
 import Nav from './components/Nav'
 import About from './components/about'
@@ -20,7 +24,7 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, {headers}) => {
-  const token = localstorage.getItem('id_token')
+  const token = localStorage.getItem('id_token')
   return {
     headers: {
       ...headers, authorization: token ? `Bearer ${token}`: ''
