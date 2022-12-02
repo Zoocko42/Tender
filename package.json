@@ -2,7 +2,7 @@
   "name": "tender",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/build",
+  "homepage": "./",
   "proxy": "http://localhost:3001",
   "scripts": {
     "start": "node server/server.js",
