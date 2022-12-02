@@ -1,8 +1,12 @@
 import React from "react";
 import logo from "../IMG/tenderLogoNoBack.png"
 import {Link} from "react-router-dom"
-
 import Auth from '../utils/auth';
+
+import {InputText} from 'primereact/inputtext';
+import 'primereact/resources/themes/saga-blue/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 
 function homepage() {
 
@@ -40,6 +44,7 @@ function homepage() {
         <button type="button" className="signupBtn">Sign Up
         </button>
       </Link>
+      <InputText></InputText>
       </>)}
     </div>
 
