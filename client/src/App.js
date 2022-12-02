@@ -16,6 +16,9 @@ import ParentSignup from './components/signup/parent'
 import SitterSignup from './components/signup/sitter'
 import ParentAccount from './components/accounts/paccount'
 import SitterAccount from './components/accounts/saccount'
+import Prime from './prime'
+
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -53,7 +56,7 @@ return(
         <Route path='/about' element={<About />} />
       <Route path='/sitter/saccount' element={<SitterAccount></SitterAccount>}></Route>
       <Route path="/parent/paccount" element={<ParentAccount></ParentAccount>}></Route>
-        
+       <Route path="/prime" element={<Prime></Prime>}></Route>
         {/* <Route path='/help' element={<Help />} /> */}
       </Routes>
     </Router>
