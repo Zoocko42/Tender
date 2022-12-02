@@ -22,7 +22,7 @@ const Login = (props) => {
       const { data } = await login({
         variables: { ...formState }
       });
-      console.log(data)
+
       Auth.login(data.loginSitter.token);
     } catch (e) {
       console.error(e);
@@ -69,7 +69,7 @@ const Login = (props) => {
         type="submit"
       >
         Login!
-      </button>
+      </button>c:\Users\Zammin\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html
     </form>
     )}
 

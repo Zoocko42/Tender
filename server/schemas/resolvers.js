@@ -30,13 +30,12 @@ const resolvers = {
     },
     Mutation: {
         addParent: async (parent, {username, password, email, firstName, lastName, city, state, aboutUs} ) => {
-            
-            await Parent.create({username, password, email, firstName, lastName, city, state, aboutUs});
+            const user = await Parent.create({username, password, email, firstName, lastName, city, state, aboutUs});
             const token = signToken(user);
             return {token, user}
         },
         addSitter: async (parent, {username, password, email, firstName, lastName, city, state, aboutMe}) => {
-            await Sitter.create({username, password, email, firstName, lastName, city, state, aboutMe});
+            const user = await Sitter.create({username, password, email, firstName, lastName, city, state, aboutMe});
             const token = signToken(user);
             return {token, user}
         },
@@ -68,7 +67,7 @@ const resolvers = {
             const user = await Sitter.findOne({username});
 
             if (!user) {
-                throw new AuthenticationError('No parent user found with this username')
+                throw new AuthenticationError('No sitter user found with this username')
             }
 
             const correctPW = await user.isCorrectPassword(password)
