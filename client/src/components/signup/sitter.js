@@ -119,7 +119,8 @@ function SitterSignup() {
             className='btn btn-block btn-primary'
             style={{cursor: 'pointer'}}
             type="submit"
-            >Sign up!
+            > Sign up!
+             <i className="pi pi-user-plus " style={{ 'fontSize': '2em' }}></i>
             </button>
 
         </form>

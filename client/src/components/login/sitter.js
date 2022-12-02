@@ -69,6 +69,7 @@ const Login = (props) => {
         type="submit"
       >
         Login!
+        <i className="pi pi-user" style={{ 'fontSize': '2em' }} ></i>
       </button>c:\Users\Zammin\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html
     </form>
     )}

@@ -6,9 +6,10 @@ import 'primeicons/primeicons.css';
 
 function primereact() {
     return (
-        <InputText>
-        </InputText>
-
+        <div className="topbar p-shadow-2">
+<InputText></InputText>
+        </div>
+        
     )
 }
 

@@ -119,4 +119,14 @@ margin-bottom: -100px;
 
 }
 
+.topbar {
+  height: 200px;
+  width: 200px;
+  background-image: url() ;
+}
+.pi {
+  height: 48px;
+  width: 48px;
+}
+
 /* still need to figure out how to style sign up pages! brain currently overload... */
