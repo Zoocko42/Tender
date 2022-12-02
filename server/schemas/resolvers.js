@@ -39,11 +39,8 @@ const resolvers = {
             const token = signToken(user);
             return {token, user}
         },
-        addSitterReq: async(parent, {submittedBy, date, time, price, city, state, specialRequests}) => {
-            if(context.user) {
+        addSitterReq: async(parent, {submittedBy, date, time, price, city, state, specialRequests}, context) => {
             return await SitterReq.create({submittedBy, date, time, price, city, state, specialRequests});
-            }
-            throw new AuthenticationError('Please log in!');
         },
     
         loginParent: async (parent, {username, password}) => {

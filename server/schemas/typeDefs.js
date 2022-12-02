@@ -34,10 +34,10 @@ const typeDefs = gql`
 
     type SitterReq {
         _id: ID
-        submittedBy: ID
+        submittedBy: String
         date: String!
         time: String!
-        price: Int!
+        price: String!
         city: String!
         state: String
         specialRequests: String!
@@ -71,7 +71,7 @@ const typeDefs = gql`
         addSitter(username: String!, password: String!, email: String!, firstName: String!, lastName: String!, city: String!, state: String!, aboutMe: String): AuthSitter
         loginSitter(username: String!, password: String!): AuthSitter
 
-        addSitterReq(submittedBy: ID, date: String!, time: String!, price: Int!, city: String!, state: String, specialRequests: String!, createdAt: Date): SitterReq
+        addSitterReq(submittedBy: String, date: String!, time: String!, price: String!, city: String!, state: String, specialRequests: String!, createdAt: Date): SitterReq
 
         updateParent(username: String!, password: String!, email: String!, firstName: String!, lastName: String!, city: String!, state: String!, aboutUs: String, dependents: [String]): AuthParent
         
