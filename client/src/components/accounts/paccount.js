@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { useQuery, useMutation } from '@apollo/client';
+import React from 'react'
+import { useQuery, } from '@apollo/client';
 import { SITTER_REQUESTS } from '../../utils/queries';
-import { ADD_SITTERREQ } from '../../utils/mutations';
 import SitReqForm from './SitReqForm'
 
 
@@ -10,8 +9,7 @@ const Parentaccount = () => {
 
   const { loading, data } = useQuery(SITTER_REQUESTS);
   
-  const sitreqs = data?.sitterReqs;
-  const log = console.log(sitreqs);  
+  const sitreqs = data?.sitterReqs; 
 
   return (
     <div>

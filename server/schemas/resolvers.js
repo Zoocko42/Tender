@@ -39,7 +39,7 @@ const resolvers = {
             const token = signToken(user);
             return {token, user}
         },
-        addSitterReq: async(parent, {submittedBy, date, time, price, city, state, specialRequests}, context) => {
+        addSitterReq: async (parent, {submittedBy, date, time, price, city, state, specialRequests}) => {
             return await SitterReq.create({submittedBy, date, time, price, city, state, specialRequests});
         },
     

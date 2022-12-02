@@ -1,12 +1,33 @@
 import React, { useState } from "react";
 import { useMutation } from '@apollo/client';
 import { ADD_SITTERREQ } from '../../utils/mutations';
+import { SITTER_REQUESTS } from '../../utils/queries'
 
 const SitReqForm = () => {
-    const [formState, setFormState] = useState({ submittedBy: " ", date: " ", time: " ", price: " ", city: " ", state: " ", specialReq: " "}
+    const [formState, setFormState] = useState({ 
+        submittedBy: " ", 
+        date: " ", 
+        time: " ", 
+        price: " ", 
+        city: " ", 
+        state: " ", 
+        specialRequests: " "}
     );
   
-    const [addSitterReq, { error, data }] = useMutation(ADD_SITTERREQ);
+    const [addSitterReq, { error }] = useMutation(ADD_SITTERREQ, {
+        update(cache, {data: { addSitterReq }}) {
+            try {
+                const {sitReqs} = cache.readQuery({query: SITTER_REQUESTS})
+
+                cache.writeQuery({
+                    query: SITTER_REQUESTS,
+                    data: {sitReqs: [addSitterReq, ...sitReqs]}
+                })
+            } catch (e) {
+                console.error(e);
+              }
+        }
+    });
   
   
   
@@ -17,7 +38,18 @@ const SitReqForm = () => {
         const { data } = await addSitterReq({
           variables: { ...formState },
         });
-  
+        console.log(data)
+        setFormState({
+        submittedBy: " ", 
+        date: " ", 
+        time: " ", 
+        price: " ", 
+        city: " ", 
+        state: " ", 
+        specialRequests: " "
+        })
+
+        window.location.reload()
       } catch (err) {
         console.error(err);
       }
@@ -54,18 +86,22 @@ const SitReqForm = () => {
             </div>
             <div className="form-group">
             <label >State</label>
-            <select class="form-control" >
-                <option value={formState.name} name="state" onChange={sitFormChange}>GA</option>
-            </select>
+            <input class="form-control" value={formState.name} name="state" onChange={sitFormChange} placeholder="GA">
+            </input>
             </div>
             <div className="form-group">
             <label >Special Requests</label>
-            <textarea value={formState.name} onChange={sitFormChange} name="specialReq" className="form-control" rows="3" placeholder="Enter any special requests for your posting"></textarea>
+            <textarea value={formState.name} onChange={sitFormChange} name="specialRequests" className="form-control" rows="3" placeholder="Enter any special requests for your posting"></textarea>
             </div>
 
             <div>
             <button type="submit" className="makereq">Make a Request</button>
             </div>
+            {error && (
+          <div className="col-12 my-3 bg-danger text-white p-3">
+            Something went wrong...
+          </div>
+            )}
         </form>
     )
 }
