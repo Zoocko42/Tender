@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom"
 import { useMutation } from '@apollo/client';
 import {LOGIN_SITTER} from '../../utils/mutations'
 
@@ -24,7 +23,7 @@ const Login = (props) => {
         variables: { ...formState }
       });
 
-      Auth.login(data.login.token);
+      Auth.login(data.loginSitter.token);
     } catch (e) {
       console.error(e);
     }
@@ -40,7 +39,6 @@ const Login = (props) => {
     {data ? (
       <div className='sitterLoginSuccess'>
         <p>You're logged in! Please continue to your homepage!</p>
-        <p><Link to='/sitter/saccount'>Continue</Link></p>
       </div>
     ) : (
     <form onSubmit={handleSubmit}>
@@ -71,7 +69,7 @@ const Login = (props) => {
         type="submit"
       >
         Login!
-      </button>
+      </button>c:\Users\Zammin\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html
     </form>
     )}
 
