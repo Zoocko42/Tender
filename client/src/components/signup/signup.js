@@ -14,10 +14,12 @@ function signup() {
 
             <Link to="/signup/parent">
                 <button type="button" onClick="alert('You pressed the button!')" className="parentBtn"> Parent Account
+                <i className="pi pi-user-plus" style={{ 'fontSize': '2em' }} ></i>
                 </button>
             </Link>
             <Link to="/signup/sitter">
                 <button type="button" onClick="alert('You pressed the button!')" className="sitterBtn">Sitter Account
+                <i className="pi pi-user-plus" style={{ 'fontSize': '2em' }} ></i>
                 </button>
             </Link>
 
