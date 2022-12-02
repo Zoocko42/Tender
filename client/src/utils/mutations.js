@@ -55,34 +55,31 @@ mutation Mutation($username: String!, $password: String!, $email: String!, $firs
 `
 
 export const ADD_SITTERREQ = gql`
-mutation addSitterReq($date: String!, $time: String!, $price: Int!, $city: String!, $specialRequests: String!) {
-    addSitterReq(date: $date, time: $time, price: $price, city: $city, specialRequests: $specialRequests) {
-      date
-      time
-      price
-      city
-      state
-      submittedBy
-      specialReq
-    }
+mutation Mutation($date: String!, $time: String!, $price: String!, $city: String!, $specialRequests: String!, $submittedBy: String, $state: String) {
+  addSitterReq(date: $date, time: $time, price: $price, city: $city, specialRequests: $specialRequests, submittedBy: $submittedBy, state: $state) {
+    submittedBy
+    date
+    time
+    price
+    city
+    state
+    specialRequests
   }
+}
 `
 
 export const UPDATE_SITTERREQ = gql `
-mutation Mutation($sitterReqId: ID!, $date: String, $time: String, $price: Int, $city: String, $state: String, $matched: Boolean, $specialRequests: String) {
-    updateSitterReq(sitterReqID: $sitterReqId, date: $date, time: $time, price: $price, city: $city, state: $state, matched: $matched, specialRequests: $specialRequests) {
-      specialRequests
-      state
-      city
-      price
-      time
-      date
-      _id
-      matched
-      submittedBy
-      createdAt
-    }
+mutation Mutation($date: String!, $time: String!, $price: String!, $city: String!, $specialRequests: String!, $submittedBy: String, $state: String) {
+  addSitterReq(date: $date, time: $time, price: $price, city: $city, specialRequests: $specialRequests, submittedBy: $submittedBy, state: $state) {
+    submittedBy
+    date
+    time
+    price
+    city
+    state
+    specialRequests
   }
+}
 `
 export const REMOVE_SITTER_REQ = gql `
 mutation Mutation($sitterReqId: ID!) {

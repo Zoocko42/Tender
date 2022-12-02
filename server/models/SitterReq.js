@@ -2,19 +2,18 @@ const { Schema, model } = require('mongoose');
 
 const sitterReqSchema = new Schema ({
     submittedBy: {
-        type: Schema.Types.ObjectId,
-        ref: "Parent"
+        type: String
     },
     date: {
         type: String,
         required: true,
     },
     time: {
-        type: "string",
+        type: String,
         required: true,
     },
     price: {
-        type: Number,
+        type: String,
         required: true,
     },
     city: {
@@ -23,7 +22,6 @@ const sitterReqSchema = new Schema ({
     },
     state: {
         type: String,
-        maxLength: 2 
     },
     specialRequests: {
         type: String,
