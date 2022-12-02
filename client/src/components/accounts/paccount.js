@@ -8,27 +8,21 @@ import { ADD_SITTERREQ } from '../../utils/mutations';
 const Parentaccount = () => {
   const { loading, data } = useQuery(SITTER_REQUESTS);
   const [addSitterReq, { error }] = useMutation(ADD_SITTERREQ);
-  const [formState, setFormState] = useState({
-    submittedBy: '',
-    date: '',
-    time: '',
-    price: '',
-    city: '',
-    state: '',
-    specialReq: '',
-  });
+  const [formState, setFormState] = useState({ submittedBy: " ", date: " ", time: " ", price: " ", city: " ", state: " ", specialReq: " "}
+  );
 
   const sitreqs = data?.sitterReqs;
   const log = console.log(sitreqs);
 
   const sitFormSubmit = async (event) => {
     event.preventDefault();
+
     try {
-      const { data } = addSitterReq({
+      const { data } = await addSitterReq({
         variables: { ...formState },
       });
 
-      window.location.reload();
+      window.location.reload()
     } catch (err) {
       console.error(err);
     }
@@ -36,8 +30,8 @@ const Parentaccount = () => {
 
 
 const sitFormChange =(event) => {
-  const { name, value} = event.target;
-  setFormState({ ...formState, [name]: value});
+  const value = event.target.value;
+  setFormState({...formState, value});
 };
 
   return (

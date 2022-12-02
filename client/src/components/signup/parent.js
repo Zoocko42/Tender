@@ -110,6 +110,7 @@ function ParentSignup() {
             style={{cursor: 'pointer'}}
             type="submit"
             >Sign up!
+             <i className="pi pi-user-plus " style={{ 'fontSize': '2em' }} ></i>
             </button>
 
         </form>

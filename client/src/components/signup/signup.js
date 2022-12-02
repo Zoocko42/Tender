@@ -1,21 +1,31 @@
 import React from 'react';
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
+// new npm package push this up!
+import { InputText } from 'primereact/inputtext';
+import 'primereact/resources/themes/saga-blue/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 
- function signup() {
-   
+function signup() {
+
     return (
 
-        <div className='accounts'>
+        <div className='topbar p-shadow-2'>
+
             <Link to="/signup/parent">
-            <button type="button" onClick="alert('You pressed the button!')" className="parentBtn"> Parent Account 
-            </button>
+                <button type="button" onClick="alert('You pressed the button!')" className="parentBtn"> Parent Account
+                <i className="pi pi-user-plus" style={{ 'fontSize': '2em' }} ></i>
+                </button>
             </Link>
             <Link to="/signup/sitter">
-            <button type="button" onClick="alert('You pressed the button!')" className="sitterBtn">Sitter Account
-            </button>
+                <button type="button" onClick="alert('You pressed the button!')" className="sitterBtn">Sitter Account
+                <i className="pi pi-user-plus" style={{ 'fontSize': '2em' }} ></i>
+                </button>
             </Link>
+
+
         </div>
     );
 }
-export default signup; 
+export default signup;
 

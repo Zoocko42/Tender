@@ -24,6 +24,7 @@
   margin-left: 100px;
   width: 150px;
   height: 100px;
+
 }
 
 .parentBtn {
@@ -32,10 +33,11 @@
   font-weight: bolder;
   background-color: rosybrown;
   border-radius: 50%;
+  margin-left: 500px;
+  height: 150px;
+  width: 500px;
   margin-top: 200px;
-  margin-left: 300px;
-  height: 300px;
-  width: 300px;
+
 }
 
 .sitterBtn {
@@ -44,9 +46,10 @@
   font-weight: bolder;
   background-color: rosybrown;
   border-radius: 50%;
-  margin-left: 250px;
-  height: 300px;
-  width: 300px;
+  margin-left: 500px;
+  height: 150px;
+  width: 500px;
+  margin-top: 20px;
 }
 
 .sitterjobs {
@@ -117,6 +120,16 @@ margin-bottom: -100px;
   width: 500px;
   margin-top: 20px;
 
+}
+
+.topbar {
+  height: 200px;
+  width: 200px;
+  background-image: url() ;
+}
+.pi {
+  height: 48px;
+  width: 48px;
 }
 
 /* still need to figure out how to style sign up pages! brain currently overload... */

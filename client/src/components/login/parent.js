@@ -65,6 +65,7 @@ export default function MyForm(props) {
         type="submit"
       >
         Login!
+        <i className="pi pi-user" style={{ 'fontSize': '2em' }} ></i>
       </button>
     </form>
     )}

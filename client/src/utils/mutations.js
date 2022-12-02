@@ -55,7 +55,7 @@ mutation Mutation($username: String!, $password: String!, $email: String!, $firs
 `
 
 export const ADD_SITTERREQ = gql`
-mutation Mutation($date: String!, $time: String!, $price: Int!, $city: String!, $specialRequests: String!) {
+mutation addSitterReq($date: String!, $time: String!, $price: Int!, $city: String!, $specialRequests: String!) {
     addSitterReq(date: $date, time: $time, price: $price, city: $city, specialRequests: $specialRequests) {
       date
       time
