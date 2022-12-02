@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.loginBtn {
+.loginBtn, #parentAccountBtn {
   background-color: #04AA6D;
   border-radius: 200px;
   font-weight: bolder;
@@ -16,7 +16,7 @@
   margin-left: 540px;
 }
 
-.signupBtn {
+.signupBtn, #sitterAccountBtn {
   background-color: #04AA6D;
   border-radius: 200px;
   font-size: large;
